@@ -175,15 +175,29 @@ class Tea {
         $data = self::decrypt($data, pack("H*" , $k));
         var_dump($data);
 
-        $v = '008022a6785ec57392824936e439cd971d740c2ac0ca0d94e8c258aa2da8498a0576c330828534efad26ca206eef39c3994ca5265c719ef3289487893d2ef4e6ac72f35adfa3b02ab701673472bb6c88ba871b7bfe3bbe6f17c23b88d5a77e444b828456634aba70a3f36eb6763c51ca5268ef461f20c73d45b71976a7bf347ad75b00000000a9884e910004214b4650';
-        $k = '13404B5427A13C45E69BF78147E748D8';
+        $v = '008022a6785ec57392824936e439cd97'.
+             '1d740c2ac0ca0d94e8c258aa2da8498a'.
+             '0576c330828534efad26ca206eef39c3'.
+             '994ca5265c719ef3289487893d2ef4e6'.
+             'ac72f35adfa3b02ab701673472bb6c88'.
+             'ba871b7bfe3bbe6f17c23b88d5a77e44'.
+             '4b828456634aba70a3f36eb6763c51ca'.
+             '5268ef461f20c73d45b71976a7bf347a'.
+             'd75b00000000a9884e910004214b4650';
         $data = self::encrypt($v, pack("H*" , $k));
 
         $data = self::decrypt($data, pack("H*" , $k));
         var_dump($data);
 
-        $v = '008022a6785ec57392824936e439cd971d740c2ac0ca0d94e8c258aa2da8498a0576c330828534efad26ca206eef39c3994ca5265c719ef3289487893d2ef4e6ac72f35adfa3b02ab701673472bb6c88ba871b7bfe3bbe6f17c23b88d5a77e444b828456634aba70a3f36eb6763c51ca5268ef461f20c73d45b71976a7bf347ad75b00000000a9884e910004214b4650';
-        $k = '13404B5427A13C45E69BF78147E748D8';
+        $v = '008022a6785ec57392824936e439cd97'.
+             '1d740c2ac0ca0d94e8c258aa2da8498a'.
+             '0576c330828534efad26ca206eef39c3'.
+             '994ca5265c719ef3289487893d2ef4e6'.
+             'ac72f35adfa3b02ab701673472bb6c88'.
+             'ba871b7bfe3bbe6f17c23b88d5a77e44'.
+             '4b828456634aba70a3f36eb6763c51ca'.
+             '5268ef461f20c73d45b71976a7bf347a'.
+             'd75b00000000a9884e910004214b4650';
         $data = self::encrypt(pack("H*", $v), pack("H*" , $k));
 
         $data = self::decrypt($data, pack("H*" , $k));
